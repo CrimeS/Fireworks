@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>CrimeS:Fireworks_display</id>
+	<name>Fireworks</name>
+	<version>1.0</version>
+	<type>modification</type>
+	<install>
+		<readme>readme.txt</readme>
+		<require-file name="fireworks.js" destination="$themedir/scripts" />
+		<modification format="xml" type="file">install_fireworks.xml</modification>
+	</install>
+	<uninstall>
+		<remove-file name="$themedir/scripts/fireworks.js" />
+		<modification type="file" reverse="true">install_fireworks.xml</modification>
+	</uninstall>
+</package-info>

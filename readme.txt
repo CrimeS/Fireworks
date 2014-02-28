@@ -1,0 +1,1 @@
+I'm not the author of this fireworks code. I just used this code to make a installer, so new users can simply install it!
