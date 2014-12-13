@@ -15,9 +15,31 @@
 		<operation>
 			<search position="after"><![CDATA[// Here comes the JavaScript bits!]]></search>
 			<add><![CDATA[
-echo '
-<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/fireworks.js"></script>';
+
+	if(!empty($settings['firework_option']))
+		echo '
+	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/fireworks.js"></script>';
+
 ]]></add>
+		</operation>
+		
+		<operation>
+			<search position="replace"><![CDATA[$settings['require_theme_strings'] = false;]]></search>
+			<add><![CDATA[$settings['require_theme_strings'] = true;]]></add>
+		</operation>
+	</file>
+	
+	<file name="$themedir/settings.template.php">
+		<operation>
+			<search position="after"><![CDATA[array(
+			'id' => 'additional_options_collapsable',
+			'label' => $txt['additional_options_collapsable'],
+		),]]></search>
+			<add><![CDATA['',
+		array(
+			'id' => 'firework_option',
+			'label' => $txt['firework_label'],
+		),]]></add>
 		</operation>
 	</file>
 </modification>
