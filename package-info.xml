@@ -8,18 +8,10 @@
 	<install>
 		<readme>readme.txt</readme>
 		<require-file name="fireworks.js" destination="$themedir/scripts" />
-		<require-file name="languages/ThemeStrings.english.php" destination="$themedir/languages" />
-		<require-file name="languages/ThemeStrings.english-utf8.php" destination="$themedir/languages" />
-		<require-file name="languages/ThemeStrings.polish.php" destination="$themedir/languages" />
-		<require-file name="languages/ThemeStrings.polish-utf8.php" destination="$themedir/languages" />
 		<modification format="xml" type="file">install_fireworks.xml</modification>
 	</install>
 	<uninstall>
 		<remove-file name="$themedir/scripts/fireworks.js" />
-		<remove-file name="$themedir/languages/ThemeStrings.english.php" />
-		<remove-file name="$themedir/languages/ThemeStrings.english-utf8.php" />
-		<remove-file name="$themedir/languages/ThemeStrings.polish.php" />
-		<remove-file name="$themedir/languages/ThemeStrings.polish-utf8.php" />
 		<modification type="file" reverse="true">install_fireworks.xml</modification>
 	</uninstall>
 </package-info>
