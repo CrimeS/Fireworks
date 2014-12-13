@@ -24,7 +24,7 @@
 		</operation>
 	</file>
 	
-	<file name="$themedir/settings.template.php">
+	<file name="$themedir/Settings.template.php">
 		<operation>
 			<search position="after"><![CDATA[array(
 			'id' => 'additional_options_collapsable',
