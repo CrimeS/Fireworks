@@ -22,14 +22,9 @@
 
 ]]></add>
 		</operation>
-		
-		<operation>
-			<search position="replace"><![CDATA[$settings['require_theme_strings'] = false;]]></search>
-			<add><![CDATA[$settings['require_theme_strings'] = true;]]></add>
-		</operation>
 	</file>
 	
-	<file name="$themedir/settings.template.php">
+	<file name="$themedir/Settings.template.php">
 		<operation>
 			<search position="after"><![CDATA[array(
 			'id' => 'additional_options_collapsable',
@@ -40,6 +35,33 @@
 			'id' => 'firework_option',
 			'label' => $txt['firework_label'],
 		),]]></add>
+		</operation>
+	</file>
+	
+	<file name="$languagedir/Modifications.english.php">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+			 $txt['firework_label'] = 'Tick the box if you want to enable fireworks';
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="$languagedir/Modifications.polish.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+			$txt['firework_label'] = 'Zaznacz to pole, jeżeli chcesz włączyć fajerwerki';
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="$languagedir/Modifications.polish-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+			$txt['firework_label'] = 'Zaznacz to pole, jeżeli chcesz włączyć fajerwerki';
+			]]></add>
 		</operation>
 	</file>
 </modification>
